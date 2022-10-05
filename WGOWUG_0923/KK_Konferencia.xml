@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<konferencia>
+<cim>Nemzetközi_Informatikai_Konferencia</cim>
+<hallgatok>
+<hallgato ikod="1">
+<nev>
+<vezeteknev>Kiss</vezeteknev>
+<keresztnev>Béla</keresztnev>
+</nev>
+<lakcim>
+<irsz>5456</irsz>
+<varos>Budapest</varos>
+<utca>Levendula utca</utca>
+<hazszam>9</hazszam>
+</lakcim>
+</hallgato>
+<hallgato ikod="2">
+<nev>
+<vezeteknev>Kovács</vezeteknev>
+<keresztnev>Gabriella</keresztnev>
+</nev>
+<lakcim>
+<irsz>3456</irsz>
+<varos>Miskolc</varos>
+<utca>Hajós utca</utca>
+<hazszam>13</hazszam>
+</lakcim>
+</hallgato>
+<hallgato ikod="3">
+<nev>
+<vezeteknev>Berecz</vezeteknev>
+<keresztnev>Virág</keresztnev>
+</nev>
+<lakcim>
+<irsz>8542</irsz>
+<varos>Győr</varos>
+<utca>Deák tér</utca>
+<hazszam>7</hazszam>
+</lakcim>
+</hallgato>
+</hallgatok>
+<helyszin>Budapesti_Nagy_Konferenciaterem</helyszin>
+<eloado>
+<nev>
+<vezeteknev>Fehérváry</vezeteknev>
+<keresztnev>István</keresztnev></nev>
+<adoszam>0123456789</adoszam>
+<lakcim>
+<irsz>1001</irsz>
+<varos>Budapest</varos>
+<utca>Szent_Péter utca</utca>
+<hazszam>4</hazszam>
+</lakcim>
+</eloado>
+<date>2023-02-08</date>
+</konferencia>

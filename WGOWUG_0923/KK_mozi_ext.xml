@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mozi>
+	<film id="txn_nxm_2jb" mufaj="horror">
+		<rendezo id="nzk_4mx_2jb" nev="alex" />
+		<szinesz id="u5q_4xm_2jb" nev="Madison_Ivy" />
+		<iro id="trv_4xm_2jb" />
+		<producer id="pdc_4xm_2jb" nev="David_Smith" />
+		<dramaturg id="dmt_4xm_2jb" nev="Kevin_Harris" />
+		<operator id="opt_4xm_2jb" nev="Hannah_Foster" />
+	</film>
+</mozi>
