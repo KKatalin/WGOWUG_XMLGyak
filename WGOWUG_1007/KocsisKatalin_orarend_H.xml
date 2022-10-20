@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<orarend>
+	<ora id="1" tipus="GEIAK120-BL">
+		<targy>Integrált vállalati rendszerek</targy>
+		<idopont>
+			<nap>2022.09.09</nap>
+			<mettol>12.30</mettol>
+			<meddig>15.50</meddig>
+		</idopont>
+		<helyszin>In/15</helyszin>
+		<oktato>Dr. Samad Dadvandipour</oktato>
+		<szak>Mérnök informatikus (BSc) alapszak</szak>
+	</ora>
+	<ora id="2" tipus="GEIAK120-BL">
+		<targy>Integrált vállalati rendszerek</targy>
+		<idopont>
+			<nap>2022.09.09</nap>
+			<mettol>16.00</mettol>
+			<meddig>19.30</meddig>
+		</idopont>
+		<helyszin>In/15</helyszin>
+		<oktato>Dr. Samad Dadvandipour</oktato>
+		<szak>Mérnök informatikus (BSc) alapszak</szak>
+	</ora>
+	<ora id="11" tipus="GEIAK130-BL">
+		<targy>Mesterséges intelligencia alapok </targy>
+		<idopont>
+			<nap>2022.09.30</nap>
+			<mettol> 12.30</mettol>
+			<meddig>15.50</meddig>
+		</idopont>
+		<helyszin>A1/317 </helyszin>
+		<oktato>Kunné Dr. Tamás Judit</oktato>
+		<szak>Mérnök informatikus (BSc) alapszak</szak>
+	</ora>
+	<ora id="12" tipus="GEIAK130-BL">
+		<targy>Mesterséges intelligencia alapok </targy>
+		<idopont>
+			<nap>2022.09.30</nap>
+			<mettol> 16.00</mettol>
+			<meddig>19.30</meddig>
+		</idopont>
+		<helyszin>A1/317 </helyszin>
+		<oktato>Kunné Dr. Tamás Judit</oktato>
+		<szak>Mérnök informatikus (BSc) alapszak</szak>
+	</ora>
+	<ora id="3" tipus="GEIAK120-BL">
+		<targy>Integrált vállalati rendszerek</targy>
+		<idopont>
+			<nap>2022.10.07</nap>
+			<mettol> 16.00</mettol>
+			<meddig>19.30</meddig>
+		</idopont>
+		<helyszin>In/15</helyszin>
+		<oktato>Dr. Samad Dadvandipour</oktato>
+		<szak>Mérnök informatikus (BSc) alapszak</szak>
+	</ora>
+	<ora id="13" tipus="GEIAK130-BL">
+		<targy>Mesterséges intelligencia alapok </targy>
+		<idopont>
+			<nap>2022.10.08</nap>
+			<mettol>8.30</mettol>
+			<meddig>11.50</meddig>
+		</idopont>
+		<helyszin>In/15</helyszin>
+		<oktato>Fazekas Levente</oktato>
+		<szak>Mérnök informatikus (BSc) alapszak</szak>
+	</ora>
+	<ora id="21" tipus="GEIAL30A-BL">
+		<targy>Windows rendszergazda</targy>
+		<idopont>
+			<nap>2022.10.08</nap>
+			<mettol> 12.20</mettol>
+			<meddig>15.40</meddig>
+		</idopont>
+		<helyszin>In/101</helyszin>
+		<oktato>Wagner György</oktato>
+		<szak>Mérnök informatikus (BSc) alapszak</szak>
+	</ora>
+	<ora id="4" tipus="GEIAK120-BL">
+		<targy>Integrált vállalati rendszerek</targy>
+		<idopont>
+			<nap>2022.10.14</nap>
+			<mettol> 12.30</mettol>
+			<meddig>15.50</meddig>
+		</idopont>
+		<helyszin>In/15</helyszin>
+		<oktato>Kulcsárné Dr.Forrai Mónika</oktato>
+		<szak>Mérnök informatikus (BSc) alapszak</szak>
+	</ora>
+	<ora id="14" tipus="GEIAK130-BL">
+		<targy>Mesterséges intelligencia alapok </targy>
+		<idopont>
+			<nap>2022.10.14</nap>
+			<mettol> 16.00</mettol>
+			<meddig>19.30</meddig>
+		</idopont>
+		<helyszin>In/15</helyszin>
+		<oktato>Fazekas Levente</oktato>
+		<szak>Mérnök informatikus (BSc) alapszak</szak>
+	</ora>
+	<ora id="22" tipus="GEIAL30A-BL">
+		<targy>Windows rendszergazda</targy>
+		<idopont>
+			<nap>2022.10.15</nap>
+			<mettol>8.30</mettol>
+			<meddig>11.50</meddig>
+		</idopont>
+		<helyszin>In/101</helyszin>
+		<oktato>Wagner György</oktato>
+		<szak>Mérnök informatikus (BSc) alapszak</szak>
+	</ora>
+	<ora id="23" tipus="GEIAL30A-BL">
+		<targy>Windows rendszergazda</targy>
+		<idopont>
+			<nap>2022.10.21</nap>
+			<mettol> 16.00</mettol>
+			<meddig>19.30</meddig>
+		</idopont>
+		<helyszin>In/102</helyszin>
+		<oktato>Wagner György</oktato>
+		<szak>Mérnök informatikus (BSc) alapszak</szak>
+	</ora>
+	<ora id="24" tipus="GEIAL30A-BL">
+		<targy>Windows rendszergazda</targy>
+		<idopont>
+			<nap>2022.11.18</nap>
+			<mettol> 16.00</mettol>
+			<meddig>19.30</meddig>
+		</idopont>
+		<helyszin>In/102</helyszin>
+		<oktato>Wagner György</oktato>
+		<szak>Mérnök informatikus (BSc) alapszak</szak>
+	</ora>
+	<ora id="31" tipus="GEIAL332-BL">
+		<targy>Adatkezelés XML-ben</targy>
+		<idopont>
+			<nap>2022.09.23</nap>
+			<mettol> 12.30</mettol>
+			<meddig>15.50</meddig>
+		</idopont>
+		<helyszin>In/101</helyszin>
+		<oktato>Dr. Bednarik László</oktato>
+		<szak>Mérnök informatikus (BSc) alapszak</szak>
+	</ora>
+	<ora id="41" tipus="GEIAL333-BL">
+		<targy>Web-es alkalmazások (Java)</targy>
+		<idopont>
+			<nap>2022.09.23</nap>
+			<mettol> 16.00</mettol>
+			<meddig>19.30</meddig>
+		</idopont>
+		<helyszin>In/103</helyszin>
+		<oktato>Kunné Dr. Tamás Judit</oktato>
+		<szak>Mérnök informatikus (BSc) alapszak</szak>
+	</ora>
+	<ora id="42" tipus="GEIAL333-BL">
+		<targy>Web-es alkalmazások (Java)</targy>
+		<idopont>
+			<nap>2022.09.24</nap>
+			<mettol>8.30</mettol>
+			<meddig>11.50</meddig>
+		</idopont>
+		<helyszin>In/103</helyszin>
+		<oktato>Kunné Dr. Tamás Judit</oktato>
+		<szak>Mérnök informatikus (BSc) alapszak</szak>
+	</ora>
+	<ora id="43" tipus="GEIAL333-BL">
+		<targy>Web-es alkalmazások (Java)</targy>
+		<idopont>
+			<nap>2022.09.24</nap>
+			<mettol> 12.20</mettol>
+			<meddig>15.40</meddig>
+		</idopont>
+		<helyszin>In/103</helyszin>
+		<oktato>Kunné Dr. Tamás Judit</oktato>
+		<szak>Mérnök informatikus (BSc) alapszak</szak>
+	</ora>
+	<ora id="44" tipus="GEIAL333-BL">
+		<targy>Web-es alkalmazások (Java)</targy>
+		<idopont>
+			<nap>2022.09.24</nap>
+			<mettol> 16.00</mettol>
+			<meddig>19.20</meddig>
+		</idopont>
+		<helyszin>In/103</helyszin>
+		<oktato>Kunné Dr. Tamás Judit</oktato>
+		<szak>Mérnök informatikus (BSc) alapszak</szak>
+	</ora>
+	<ora id="32" tipus="GEIAL332-BL">
+		<targy>Adatkezelés XML-ben</targy>
+		<idopont>
+			<nap>2022.10.07</nap>
+			<mettol> 12.30</mettol>
+			<meddig>15.50</meddig>
+		</idopont>
+		<helyszin>In/101</helyszin>
+		<oktato>Dr. Bednarik László</oktato>
+		<szak>Mérnök informatikus (BSc) alapszak</szak>
+	</ora>
+	<ora id="33" tipus="GEIAL332-BL">
+		<targy>Adatkezelés XML-ben</targy>
+		<idopont>
+			<nap>2022.10.21</nap>
+			<mettol> 12.30</mettol>
+			<meddig>15.50</meddig>
+		</idopont>
+		<helyszin>In/101</helyszin>
+		<oktato>Dr. Bednarik László</oktato>
+		<szak>Mérnök informatikus (BSc) alapszak</szak>
+	</ora>
+	<ora id="51" tipus="GEIAL331-BL">
+		<targy>Web technológiák 1.</targy>
+		<idopont>
+			<nap>2022.10.22</nap>
+			<mettol>8.30</mettol>
+			<meddig>15.30</meddig>
+		</idopont>
+		<helyszin>In/101</helyszin>
+		<oktato>Agárdi Anita</oktato>
+		<szak>Mérnök informatikus (BSc) alapszak</szak>
+	</ora>
+	<ora id="52" tipus="GEIAL331-BL">
+		<targy>Web technológiák 1.</targy>
+		<idopont>
+			<nap>2022.11.05</nap>
+			<mettol>8.30</mettol>
+			<meddig>15.30</meddig>
+		</idopont>
+		<helyszin>In/101</helyszin>
+		<oktato>Agárdi Anita</oktato>
+		<szak>Mérnök informatikus (BSc) alapszak</szak>
+	</ora>
+	<ora id="34" tipus="GEIAL332-BL">
+		<targy>Adatkezelés XML-ben</targy>
+		<idopont>
+			<nap>2022.11.18</nap>
+			<mettol> 12.30</mettol>
+			<meddig>15.50</meddig>
+		</idopont>
+		<helyszin>In/101</helyszin>
+		<oktato>Dr. Bednarik László</oktato>
+		<szak>Mérnök informatikus (BSc) alapszak</szak>
+	</ora>
+</orarend>

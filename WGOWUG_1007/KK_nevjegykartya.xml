@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nevjegykartyak>
+    <nevjegykartya id="1">
+        <nev>Ferency Réka</nev>
+        <ceg>
+            <nev>Ferenczy Pékség Kft</nev>
+            <cim>
+                <iranyitoszam>2345</iranyitoszam>
+                <varos>Budapest</varos>
+                <utca>Havasi utca</utca>
+                <hazszam>11</hazszam>
+            </cim>
+            <telefonszam id="korzet"></telefonszam>
+            <weblap>rekafpeksege.hu</weblap>
+        </ceg>
+        <beosztas>Vezető</beosztas>
+        <telefonszam id="korzet2">06/20/123-4564</telefonszam>
+        <email>rekaf@peksegkft.hu</email>
+    </nevjegykartya>
+    <nevjegykartya id="2">
+        <nev>Babek Roland</nev>
+        <ceg>
+            <nev>Rolika TuningAuto Kft</nev>
+            <cim>
+                <iranyitoszam>1356</iranyitoszam>
+                <varos>Győr</varos>
+                <utca>Mákos utca</utca>
+                <hazszam>3</hazszam>
+            </cim>
+            <telefonszam id="korzet"></telefonszam>
+            <weblap>tuningrolika.hu</weblap>
+        </ceg>
+        <beosztas>Alkalmazott</beosztas>
+        <telefonszam id="korzet2">06/70/125-2367</telefonszam>
+        <email>rolika@tauto.hu</email>
+    </nevjegykartya>
+      <nevjegykartya id="2">
+        <nev>Kiss Béla</nev>
+        <ceg>
+            <nev>Fakereskedelm Kft</nev>
+            <cim>
+                <iranyitoszam>8327</iranyitoszam>
+                <varos>Békéscsaba</varos>
+                <utca>Tulipán utca</utca>
+                <hazszam>34</hazszam>
+            </cim>
+            <telefonszam id="korzet"></telefonszam>
+            <weblap>rekafpeksege.hu</weblap>
+        </ceg>
+        <beosztas>Alkalmazott</beosztas>
+        <telefonszam id="korzet2">06/30/624-368</telefonszam>
+        <email>kbela@fakereskedelem.hu</email>
+    </nevjegykartya>
+</nevjegykartyak>
