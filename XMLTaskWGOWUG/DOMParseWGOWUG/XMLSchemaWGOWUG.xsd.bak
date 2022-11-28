@@ -1,0 +1,173 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+elementFormDefault="qualified"
+attributeFormDefault="qualified"> <!-- XML-Séma gyökéreleme, tartalmazhat néhány attribútumot. sémában használt elemek és adattípusok a "http://www.w3.org/2001/XMLSchema" névtérből származnak -->
+  <xs:element name="Turizmus"> <!--Az elem neve Turizmus, a name az attribútum, szülőelem a sémaelem -->
+    <xs:complexType> <!-- összetett típusú elem, olyan XML-elem, amely más elemeket és/vagy attribútumokat tartalmaz. -->
+      <xs:sequence> <!-- a gyermekelemeknek egy szekvenciában kell megjelenniük. Minden gyermekelem 0-tól tetszőleges számú alkalommal előfordulhat. -->
+        <xs:element ref="Hotel" maxOccurs="unbounded"/> <!-- Egy másik elem nevére utal. A ref attribútum tartalmazhat egy névtér előtagot.  -->
+        <xs:element ref="Beszállító" maxOccurs="unbounded"/> <!-- maxOccurs :Megadja, hogy ez az elem hányszor fordulhat elő a szülőelemben. -->
+        <xs:element ref="Beszállítás" maxOccurs="unbounded"/>
+        <xs:element ref="Alkalmazott" maxOccurs="unbounded"/>
+        <xs:element ref="FogyasztásMérő" maxOccurs="unbounded"/>
+        <xs:element ref="Foglalás" maxOccurs="unbounded"/>
+        <xs:element ref="Foglaló" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element> 
+  <xs:element name="Hotel"> <!-- Hotel egyed-->
+    <xs:complexType mixed="true"> <!-- szöveget és egyéb elemeket is tartalmaz -->
+      <xs:sequence minOccurs="0"> <!--  minOccurs: Megadja, hogy a sorozatelem hányszor fordulhat elő minimálisan a szülőelemben -->
+        <xs:element name="Elérhetőség" type="xs:string"/> <!-- hotelnek a gyerekeleme, tipusa: string -->
+        <xs:element name="Nyitvatartás" type="xs:string"/>
+        <xs:element ref="Név" minOccurs="0"/>
+      </xs:sequence>
+      <xs:attribute name="HotelId" type="xs:string"/> <!-- Hotel egyednek az egyedi azonosítója, ez attributum  -->
+    </xs:complexType>
+	<xs:key name="HotelId">
+      <xs:selector xpath="./Turizmus/Hotel"/>
+      <xs:field xpath="@HotelId"/>
+    </xs:key> 
+  </xs:element>
+  <xs:element name="Név"> <!-- Név elem-->
+    <xs:complexType mixed="true">
+      <xs:sequence minOccurs="0"> <!-- sorozatelem a szülőelembe, a névbe a keresztnév és vezeték név van -->
+        <xs:element name="Keresztnév" type="xs:string"/>
+        <xs:element name="Vezetéknév" type="xs:string"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Beszállító"> <!-- Beszállító egyed-->
+    <xs:complexType>
+      <xs:sequence> <!-- sorozatelem a szülőelembe, a beszállító egyednek név, cím és elérhetőség gyereke van -->
+        <xs:element ref="Név"/>
+        <xs:element ref="Cím"/>
+        <xs:element name="Elérhetőség" type="xs:string"/>
+      </xs:sequence>
+      <xs:attribute name="Adószám" type="xs:string" use="required"/> <!-- beszállítónak az elsődleges kulcs, attribútuma az adószám -->
+    </xs:complexType>
+	<xs:key name="BeszAd">
+      <xs:selector xpath="./Turizmus/Beszállító"/>
+      <xs:field xpath="@Adószám"/>
+    </xsd:key> 
+  </xs:element>
+  <xs:element name="Cím">
+    <xs:complexType>
+      <xs:sequence> <!-- sorozatelem a szülőelembe, a címbe az irányítószám, város, utca, házszám gyerekelem van -->
+        <xs:element name="Irányítószám" type="xs:string"/>
+        <xs:element name="Város" type="xs:string"/>
+        <xs:element name="Utca" type="xs:string"/>
+        <xs:element name="Házszám" type="xs:string"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Beszállítás">  <!-- Beszállítás egyed-->
+    <xs:complexType>
+      <xs:sequence> <!-- Beszállítás gyerekelemei -->
+        <xs:element name="Beszállított_dolgok" type="xs:string"/>
+        <xs:element name="Dátum" type="xs:string"/>
+      </xs:sequence>
+      <xs:attribute name="K-Bref" type="xs:string" use="required"/> <!-- 2 idegenkulcs, mint attributum K-Bref,és K-Href -->
+      <xs:attribute name="K-Href" type="xs:string" use="required"/>
+    </xs:complexType>
+	<xsd:keyref name="BeszIdRef" refer="BeszAd">
+      <xsd:selector xpath="./Turizmus/Beszállítás"/>
+      <xsd:field xpath="@K-Bref"/>
+    </xsd:keyref> 
+	<xsd:keyref name="BeszHotIDRef" refer="HotId">
+      <xsd:selector xpath="./Turizmus/Beszállítás"/>
+      <xsd:field xpath="@K-Href"/>
+    </xsd:keyref> 
+  </xs:element>
+  <xs:element name="Alkalmazott">  <!-- Alkalmazott egyed-->
+    <xs:complexType>
+      <xs:sequence> <!-- Alkalmazott gyerekelemei -->
+        <xs:element ref="Név"/>
+        <xs:element name="SzületésiIdő" type="xs:string"/>
+        <xs:element name="SzületésiHely" type="xs:string"/>
+        <xs:element ref="Lakcím"/>
+        <xs:element name="Beosztás" type="xs:string"/>
+      </xs:sequence>
+      <xs:attribute name="SzemélyigazolványSzám" type="xs:string" use="required"/> <!-- Alkalmazott elsődleges kulcsa,attributuma a szem.ig. szám -->
+      <xs:attribute name="k-szigref" type="xs:string" use="required"/> <!-- Alkalmazott idegen kulcsa, attributuma k-szigref -->
+    </xs:complexType>
+	<xsd:key name="AlkSzemIg">
+      <xsd:selector xpath="./Turizmus/Alkalmazott"/>
+      <xsd:field xpath="@SzemélyigazolványSzám"/>
+    </xsd:key>
+	<xsd:keyref name="AlkHotIDRef" refer="HotId">
+      <xsd:selector xpath="./Turizmus/Beszállítás"/>
+      <xsd:field xpath="@k-szigref"/>
+    </xsd:keyref>
+  </xs:element>
+  <xs:element name="Lakcím"> <!-- Alkalmazott gyerekeleme a Lakcím és a Lakcím szülő elem itt, és neki lesznek gyerekelemei-->
+    <xs:complexType>
+      <xs:sequence> <!-- Lakcím gyerekelemei -->
+        <xs:element name="Irányítószám" type="xs:string"/>
+        <xs:element name="Város" type="xs:string"/>
+        <xs:element name="Utca" type="xs:string"/>
+        <xs:element name="Házszám" type="xs:string"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FogyasztásMérő">  <!-- Fogyasztásmérő egyed-->
+    <xs:complexType>
+      <xs:sequence> <!-- Fogyasztásmérő gyerekelemei -->
+        <xs:element name="Szolgáltató" type="xs:string"/>
+        <xs:element name="Óraállás" type="xs:string"/>
+        <xs:element name="HitelesítőDátum" type="xs:string"/>
+      </xs:sequence>
+      <xs:attribute name="GyáriSzám" type="xs:string" use="required"/> <!-- Fogyasztásmérő attribútumai -->
+      <xs:attribute name="K-GYSZref" type="xs:string" use="required"/>
+    </xs:complexType>
+	<xsd:key name="FogyGyarID">
+      <xsd:selector xpath="./Turizmus/FogyasztásMérő"/>
+      <xsd:field xpath="@GyáriSzám"/>
+    </xsd:key>
+	<xsd:keyref name="FogyHotIDRef" refer="HotId">
+      <xsd:selector xpath="./Turizmus/FogyasztásMérő"/>
+      <xsd:field xpath="@K-GYSZref"/>
+    </xsd:keyref>
+  </xs:element>
+  <xs:element name="Foglalás">  <!-- Foglalás egyed-->
+    <xs:complexType>
+      <xs:sequence> <!-- Foglalás egyed gyerekelemei-->
+        <xs:element name="SzobaSzám" type="xs:string"/>
+        <xs:element name="SzobaSzám1" type="xs:string"/>
+        <xs:element name="SzobaSzám2" type="xs:string"/>
+        <xs:element ref="Hotel"/>
+        <xs:element ref="Foglaló"/>
+        <xs:element name="Dátum" type="xs:string"/>
+      </xs:sequence>
+      <xs:attribute name="FoglalásID" type="xs:string" use="required"/> <!-- Foglalás egyed attributumai-->
+      <xs:attribute name="K-Fref" type="xs:string" use="required"/>
+    </xs:complexType>
+	<xsd:key name="FoglID">
+      <xsd:selector xpath="./Turizmus/Foglalás"/>
+      <xsd:field xpath="@FoglalásID"/>
+    </xsd:key>
+	<xsd:keyref name="FoglHotIDRef" refer="HotId">
+      <xsd:selector xpath="./Turizmus/Foglalás"/>
+      <xsd:field xpath="@K-Fref"/>
+    </xsd:keyref>
+  </xs:element>
+  <xs:element name="Foglaló"> <!-- Foglaló egyed-->
+    <xs:complexType mixed="true">
+      <xs:sequence> <!-- Foglaó egyed gyerekelemei-->
+        <xs:element name="Telefonszám" type="xs:string"/>
+        <xs:element ref="Lakcím"/>
+        <xs:element ref="Név"/>
+      </xs:sequence>
+      <xs:attribute name="K-szigref" type="xs:string"/> <!-- Foglaló egyed attributumai-->
+      <xs:attribute name="SzemélyigazolványSzám" type="xs:string"/>
+    </xs:complexType>
+	<xsd:key name="FoglóID">
+      <xsd:selector xpath="./Turizmus/Foglaló"/>
+      <xsd:field xpath="@K-szigref"/>
+    </xsd:key>
+	<xsd:keyref name="FoglóHotIDRef" refer="HotId">
+      <xsd:selector xpath="./Turizmus/Foglaló"/>
+      <xsd:field xpath="@SzemélyigazolványSzám"/>
+    </xsd:keyref>
+  </xs:element>
+</xs:schema> <!--  XML-Séma gyökérelem vége -->
